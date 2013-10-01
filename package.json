@@ -1,0 +1,10 @@
+{
+  "name": "j432",
+  "version": "0.0.1",
+  "dependencies": {
+    "grunt": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*"
+  }
+}
