@@ -1,5 +1,5 @@
-.htaccess
-.sass-cache
-node_modules
-style.css
 style.css.map
+.htaccess
+/.sass-cache
+/node_modules
+style.css

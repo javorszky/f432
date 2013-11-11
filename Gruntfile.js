@@ -4,11 +4,11 @@ module.exports = function(grunt) {
       dist: {
         options: {
           sourcemap: true, // [true|false] (needs sass 3.3.0, gem install sass--pre)
-          style: 'compressed', // [nested|compact|compressed|expanded]
+          style: 'expanded', // [nested|compact|compressed|expanded]
           trace: true,
           // precision: 8,
           // compass: false, // can be true, config.rb should be in the same dir as Gruntfile.js
-          debugInfo: true, // if you're using FireSass Firebug plugin
+          debugInfo: false, // if you're using FireSass Firebug plugin
           // lineNumbers: true, // attache the line numbers in the generated css
           // loadPath: true, // attach the source file path into the css
           // require: [], // require ruby libraries (specify version numbers, et al)

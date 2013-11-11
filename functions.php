@@ -9,6 +9,6 @@ include( $f . 'ss.php');
 // include( $f . 'cpts.php');
 // include( $f . 'images.php');
 // include( $f . 'metabox.php');
-// include( $f . 'nav.php');
+include( $f . 'nav.php');
 // include( $f . 'shortcodes.php');
 // include( $f . 'ee.php');
