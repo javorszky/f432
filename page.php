@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div id="content">
 	<div class="row">
-		<div class="large-12 columns hentry">
+		<article class="large-12 columns hentry">
 			<?php
 			if ( function_exists('yoast_breadcrumb') ) {
 				yoast_breadcrumb('<p id="breadcrumbs">','</p>');
@@ -15,7 +15,7 @@
 				}
 			}
 			?>
-		</div>
+		</article>
 	</div>
 </div>
 
