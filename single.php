@@ -10,7 +10,7 @@
 
 	<div class="row">
 		<div class="large-8 columns">
-			<h3>The Grid</h3>
+
 			<?php
 
 			if( have_posts() ) {
