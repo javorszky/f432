@@ -40,9 +40,5 @@
 					wp_nav_menu( $args );
 					?>
 				</div>
-
-			</div>
-
-
 			</div>
 		</header>
