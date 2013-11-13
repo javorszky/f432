@@ -18,6 +18,11 @@
 		</article>
 	</div>
 </div>
+<div id="greymeta">
+	<div class="row">
+		<?php get_template_part('partials/snippet', 'callouts'); ?>
+	</div>
+</div>
 
 
 <?php get_footer();

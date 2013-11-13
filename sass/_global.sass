@@ -1,16 +1,49 @@
+.alignright
+	float: right
+	margin-left: $column-gutter
+	margin-bottom: $column-gutter
+.alignleft
+	float: left
+	margin-right: $column-gutter
+	margin-bottom: $column-gutter
+.aligncenter
+	margin: 0 auto $column-gutter auto
+	display: block
+
 blockquote
 	font-size: em-calc(20)
-	padding-left: em-calc(65, 20)
+	padding-left: em-calc(60, 20)
+	padding-right: em-calc(60, 20)
+	padding-top: 0
 	font-style: italic
 	border: none
+	position: relative
+	*
+		color: #333333
 	&::before
-		font-family: "Times New Roman"
-		content: '\201C'
-		font-size: em-calc(120)
-		color: $lightblue
+		content: ' '
+		background: transparent url(images/quote_left.svg) no-repeat center center
+		width: 26px
+		height: 21px
+		display: block
+		position: absolute
+		left: 0
+		top: 6px
+
 	&::after
-		content: '\201D'
-		font-size: em-calc(120)
-		color: $lightblue
-
-
+		content: ' '
+		background: transparent url(images/quote_right.svg) no-repeat center center
+		width: 26px
+		height: 21px
+		display: block
+		position: absolute
+		right: 24px
+		bottom: 6px
+	.no-svg &
+		&::before
+			background: transparent url(images/quote_left.png) no-repeat center center
+		&::after
+			background: transparent url(images/quote_right.png) no-repeat center center
+#greymeta
+	padding: em-calc(20) 0
+	background: #cccccc
