@@ -40,15 +40,25 @@ module.exports = function (grunt) {
                 jshintrc: '.jshintrc',
                 ignores: [
                     'js/vendor/custom.modernizr.js',
-                    'js/foundation/*.js'
+                    'js/foundation/*.js',
+                    'js/app.min.js'
                 ]
             }
         },
         watch: {
-            files: 'sass/*.sass',
-            tasks: ['sass', 'jshint', 'uglify'],
-            options: {
-                spawn: true
+            css: {
+                files: 'sass/*.sass',
+                tasks: ['sass'],
+                options: {
+                    spawn: true
+                }
+            },
+            js: {
+                files: 'js/**/*.js',
+                tasks: ['jshint', 'uglify'],
+                options: {
+                    spawn: true
+                }
             }
         }
     });
