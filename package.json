@@ -6,5 +6,8 @@
     "grunt-contrib-sass": "*",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.7.1"
   }
 }
