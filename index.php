@@ -3,7 +3,7 @@
 	<div class="row">
 		<div class="large-12 columns">
 			<h2>Welcome to Foundation</h2>
-			<p>This is version 4.1.5.</p>
+			<p>This is version 4.3.2.</p>
 			<hr />
 		</div>
 	</div>

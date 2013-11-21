@@ -1,8 +1,8 @@
 <?php
 
 add_theme_support('post-thumbnails');
-add_image_size('halfpage', 490, 9999, false);
-add_image_size('fullwidth', 980, 9999, false);
+// add_image_size('name', width, height, crop);
+
 
 
 /**

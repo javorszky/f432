@@ -1,0 +1,84 @@
+@charset "UTF-8"
+
+$roboto: "Roboto", sans-serif
+
+$lightgray: #575756
+$darkgray: #333
+$red: #9b132e
+$lightblue: #0077a8
+$gray-n: #abafb4
+
+
+
+@import ../../../sass/foundation/components/global
+@import ../../../sass/foundation/variables
+@import adminnav
+
+.corpi_page_corpi-csv-importer
+	@import ../../../sass/foundation/components/tables
+	td.status
+
+		font-weight: bold
+		text-align: center
+
+		&.new
+			color: white
+			background-color: $lightblue
+		&.modified
+			a
+				color: white
+			background-color: $red
+	#csv-uploader
+		width: 450px
+		height: 150px
+		background: #E2D2B1
+		position: relative
+		margin-bottom: 20px
+		&.hover
+			background: #FF7F00
+		p
+			line-height: 142px
+			border: 4px dashed #6E7346
+			text-align: center
+			color: $darkgray
+			font-size: 36px
+			margin: 0
+			// z-index: -1
+			// position: relative
+
+
+	#parsed-data
+		display: none
+		&.parsed
+			display: block
+
+
+body.wp-admin
+	background: transparent
+
+#importinprogress
+	/* Meat and potatoes */
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	background-color: rgba( $darkgray, 0.3 )
+	z-index: 9999
+	display: none
+	&.show
+		display: block
+	.text
+		position: fixed
+		top: 30%
+		left: 50%
+		height: 250px
+		width: 500px
+		margin-top: -125px
+		margin-left: -250px
+		padding: 45px
+		h2
+			text-align: center
+		img
+			display: block
+			margin: 0 auto

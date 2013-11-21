@@ -1,14 +1,12 @@
 {
-  "name": "j432",
-  "version": "0.0.1",
+  "name": "f432",
+  "version": "0.0.2",
   "dependencies": {
     "grunt": "*",
     "grunt-contrib-sass": "*",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
-    "grunt-contrib-jshint": "~0.7.1"
-  },
-  "devDependencies": {
-    "grunt-contrib-jshint": "~0.7.1"
+    "grunt-contrib-jshint": "~0.7.1",
+    "grunt-notify": "~0.2.16"
   }
 }
