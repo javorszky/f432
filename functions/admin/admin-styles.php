@@ -25,7 +25,7 @@ function es_is_login_page() {
  * @since 	1.0
  */
 function enq_admin_stylesheet() {
-    if( ( $_GET['page'] === 'corpi-csv-importer' && is_admin() ) || es_is_login_page() ) {
+    if( ( is_admin() ) || es_is_login_page() ) {
         wp_enqueue_style( 'admin-stylesheet', get_bloginfo('template_directory').'/functions/admin/es-admin-styles.css' );
     }
 }
@@ -91,4 +91,4 @@ function wpc_dashboard_widgets() {
 // Add actions and filters for the functions in this file
 add_action('wp_dashboard_setup', 'wpc_dashboard_widgets');
 add_filter('admin_footer_text', 'remove_footer_admin');
-add_filter('login_headerurl', 'wpc_url_login');
+// add_filter('login_headerurl', 'wpc_url_login');

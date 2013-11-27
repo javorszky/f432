@@ -1,5 +1,5 @@
 <?php
-function enQ_scripts() {
+function theme_enQ_scripts() {
 	$r = get_stylesheet_directory_uri() . '/js/';
 	$debug = true;
 
@@ -59,4 +59,4 @@ function enQ_scripts() {
 	wp_register_style( 'main', get_stylesheet_uri() );
 	wp_enqueue_style( 'main' );
 }
-add_action( 'wp_enqueue_scripts', 'enQ_scripts' );
+add_action( 'wp_enqueue_scripts', 'theme_enQ_scripts' );
