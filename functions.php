@@ -3,6 +3,7 @@
 $f = get_stylesheet_directory() . '/functions/';
 
 include( $f . 'misc.php');
+include( $f . 'users.php');
 include( $f . 'ss.php');
 include( $f . 'admin/admin-styles.php');
 // include( $f . 'admin/admin.php');
