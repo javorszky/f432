@@ -19,7 +19,7 @@ function add_es_logo( $wp_admin_bar ) {
     $wp_admin_bar->remove_node('wp-logo');
     $args = array(
         'id' => 'es_logo',
-        'title' => '<span class="ab-icon"><img src="'.get_bloginfo('template_directory') . '/functions/images/es_icon.png"/></span>',
+        'title' => '<span class="ab-icon"><img src="'.get_bloginfo('template_directory') . '/functions/images/es_icon_2014.png"/></span>',
         'href' => 'http://www.electricstudio.co.uk',
     );
     $wp_admin_bar->add_node( $args );
