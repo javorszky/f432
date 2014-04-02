@@ -56,7 +56,9 @@ function theme_enQ_scripts() {
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('fmodernizr');
 
-	wp_register_style( 'main', get_stylesheet_uri() );
+	$stylesheet_uri = get_stylesheet_uri();
+	$stylesheet_uri = add_query_arg( array( 'v' => md5_file( $stylesheet_uri ) ), $stylesheet_uri );
+	wp_register_style( 'main', $stylesheet_uri );
 	wp_enqueue_style( 'main' );
 }
 add_action( 'wp_enqueue_scripts', 'theme_enQ_scripts' );
