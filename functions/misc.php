@@ -13,3 +13,10 @@ if( !function_exists('es_silent') ) {
 		echo '<pre style="display: none;">' . print_r( $obj, true ) . '</pre>';
 	}
 }
+
+function init_constants() {
+	if(!defined('TEMPLATEURI')) {
+		define('TEMPLATEURI', trailingslashit( get_stylesheet_directory_uri() ) );
+	}
+}
+add_action( 'init', 'init_constants' );
