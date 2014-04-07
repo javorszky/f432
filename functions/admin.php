@@ -65,7 +65,6 @@ function wpc_dashboard_widgets() {
 
 // Add actions and filters for the functions in this file
 add_action('wp_dashboard_setup', 'wpc_dashboard_widgets');
-add_filter('admin_footer_text', 'remove_footer_admin');
 add_action( 'admin_bar_menu', 'add_es_logo', 1 );
 
 function replace_logo() {
