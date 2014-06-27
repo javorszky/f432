@@ -1,14 +1,11 @@
 <?php
 
-$f = get_stylesheet_directory() . '/functions/';
-
-// Re-define meta box path and URL
-define( 'RWMB_URL', trailingslashit( get_stylesheet_directory_uri() . '/lib/meta-box' ) );
-define( 'RWMB_DIR', trailingslashit( get_stylesheet_directory() . '/lib/meta-box' ) );
-// Include the meta box script
-require_once RWMB_DIR . 'meta-box.php';
+$s = get_stylesheet_directory();
+$f = $s . '/functions/';
+$lib = $s . '/lib/';
 
 include( $f . 'misc.php');
+include( $lib . 'tlc-transients/tlc-transients.php');
 include( $f . 'users.php');
 include( $f . 'ss.php');
 include( $f . 'admin.php');
