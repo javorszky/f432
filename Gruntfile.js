@@ -2,6 +2,25 @@
 module.exports = function (grunt) {
     'use strict';
     grunt.initConfig({
+        autoprefixer: {
+
+            // if you have specified only the `src` param, the destination will be set automatically,
+            // so source files will be overwritten
+            no_dest: {
+                src: 'style.css' // globbing is also possible here
+            },
+            options: {
+                browsers: ['last 2 version', 'ie 8', 'ie 9']
+            },
+            sourcemap: {
+                options: {
+                    map: true
+                },
+                src: 'style.css',
+                dest: 'style.css' // -> dest/css/file.css, dest/css/file.css.map
+            },
+        },
+
         sass: {
             dist: {
                 options: {
@@ -67,7 +86,7 @@ module.exports = function (grunt) {
         watch: {
             css: {
                 files: 'sass/**/*.sass',
-                tasks: ['sass:dist'],
+                tasks: ['sass:dist', 'autoprefixer'],
                 options: {
                     spawn: true
                 }
@@ -94,9 +113,11 @@ module.exports = function (grunt) {
                     message: 'SASS and Uglify finished running', //required
                 }
             }
-        }
+        },
+        tasks: ['autoprefixer']
     });
 
+    grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-jshint');
