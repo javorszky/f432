@@ -118,11 +118,12 @@ module.exports = function (grunt) {
     });
 
     grunt.loadNpmTasks('grunt-autoprefixer');
-    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-notify');
     grunt.registerTask('default', ['watch']);
+    grunt.registerTask('init', ['sass:dist', 'autoprefixer']);
     grunt.task.run('notify');
 };
