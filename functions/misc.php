@@ -8,18 +8,12 @@ if( !function_exists('es_preit') ) {
 		}
 	}
 }
+
 if( !function_exists('es_silent') ) {
 	function es_silent( $obj ) {
 		echo '<pre style="display: none;">' . print_r( $obj, true ) . '</pre>';
 	}
 }
-
-function init_constants() {
-	if(!defined('TEMPLATEURI')) {
-		define('TEMPLATEURI', trailingslashit( get_stylesheet_directory_uri() ) );
-	}
-}
-add_action( 'init', 'init_constants' );
 
 
 /**
@@ -31,7 +25,7 @@ add_action( 'init', 'init_constants' );
  * @return mixed           					whatever the custom holds
  */
 function es_custom( $key, $custom, $all = false, $default = '') {
-    return (array_key_exists($key, $custom)) ? ($all) ? $custom[$key] : $custom[$key][0] : $default;
+    return is_array($custom) ? (array_key_exists($key, $custom)) ? ($all) ? $custom[$key] : $custom[$key][0] : $default : $default;
 }
 
 
